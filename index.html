@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Harry Potter API</title>
+</head>
+<body>
+    <div class="container">
+        <header class="text-center mt-4">
+            <h1>Harry Potter API</h1>
+            <input type="text" id="search-bar" class="form-control mt-3" placeholder="Buscar personaje...">
+        </header>
+        <nav class="text-center mt-3">
+            <button id="characters-btn" class="btn btn-primary">Personajes</button>
+            <button id="spells-btn" class="btn btn-secondary">Hechizos</button>
+        </nav>
+        <main id="content" class="mt-4 row">
+            <!-- Aquí se cargarán las tarjetas de personajes o hechizos -->
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

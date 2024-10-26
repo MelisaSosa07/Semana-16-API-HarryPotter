@@ -1,0 +1,61 @@
+body {
+    background-color: whitesmoke; /* Color de fondo suave */
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto; 
+    font-weight: 500; 
+    font-style: normal; 
+    cursor: url('wand.png'), auto; /* Cambia el cursor a la varita mágica */
+}
+
+.header, .nav {
+    margin: 20px 0; /* Margen superior e inferior */
+}
+
+.card {
+    margin: 15px; /* Margen entre las tarjetas */
+    padding: 15px; /* Espaciado interno */
+    height: 350px; /* Altura fija para todas las tarjetas */
+    overflow: auto; /* Agrega barra de desplazamiento si el contenido excede */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra oscura para un efecto más elegante */
+    background-color: transparent; /* Fondo transparente para permitir ver la imagen */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+}
+
+.card img {
+    width: 100%; /* Imágenes de tarjeta ocupan todo el ancho */
+    border-radius: 5px; /* Bordes redondeados */
+    opacity: 1; /* Mantener la imagen completamente opaca */
+}
+
+/* Centrar el contenido */
+#content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en nuevas filas */
+}
+
+h1 {
+    color: goldenrod; /* Color del título */
+}
+
+.star {
+    position: absolute;
+    width: 5px; /* Ancho de la estrella */
+    height: 5px; /* Alto de la estrella */
+    background-color: goldenrod; /* Color plateado */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Forma de estrella */
+    opacity: 0; /* Inicialmente invisible */
+    pointer-events: none; /* Evita que el cursor interactúe con las estrellas */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1; /* Hacer visible al principio */
+    }
+    100% {
+        transform: translateY(500px) translateX(calc(var(--random-x) * 1px)); /* Altura de caída + desplazamiento en X */
+        opacity: 0; /* Se desvanecen al caer */
+    }
+}
+
